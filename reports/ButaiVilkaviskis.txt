@@ -1,0 +1,9 @@
+## Monthly summary: 2024-03
+────────────────────────────────────────
+flat count | total 30 | unchanged
+flat price | E 1.23M Eur | Δ -4.00k Eur | -0.32 %
+flat decreased 1 | E -4.00k Eur | μ -4.00k Eur | -6.67 %
+flat stable 29
+────────────────────────────────────────
+
+

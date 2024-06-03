@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="container mt-5 about-content">
+    <div class="row">
+        <div class="col">
+            <h1 class="mb-3">About Us</h1>
+            <p>Welcome to the Real Estate Analysis Tool. This tool offers functionality of real estate advertisements collection, analysis and forecasts.</p>
+            <p>By creating multiple profiles, you can monitor different cities and types of real estate.</p>
+            <p>Tool is very intuitive and easy to use.</p>
+        </div>
+    </div>
+
+    <div class="subscription-form mt-5">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates about changes in real estate prices directly to your inbox.</p>
+        <form id="subscription-form">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+            <p id="subscription-message" class="text-success"></p>
+        </form>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/subscribe.js') }}"></script>
+{% endblock %}

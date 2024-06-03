@@ -1,0 +1,108 @@
+## 2024-05-08 01:39:58.743594. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5097 | unchanged
+flat price | E 205.16M Eur | Δ -345.61k Eur | -0.17 %
+flat increased 11 | E 3.70k Eur | μ 0.74k Eur | 6.55 %
+flat decreased 115 | E -67.39k Eur | μ -1.18k Eur | -3.22 %
+flat stable 1486
+────────────────────────────────────────
+
+## 2024-05-13 22:33:34.799829. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5097 | unchanged
+flat price | E 192.00M Eur | Δ -214.70k Eur | -0.11 %
+flat increased 9 | E 3.20k Eur | μ 1.07k Eur | 7.15 %
+flat decreased 82 | E -27.10k Eur | μ -0.85k Eur | -2.99 %
+flat stable 1418
+────────────────────────────────────────
+
+## 2024-05-13 22:34:59.568731. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+
+## 2024-05-13 22:38:59.299171. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+
+## 2024-05-13 22:42:46.342662. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+
+## 2024-05-13 22:44:57.682095. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+
+## 2024-05-13 22:45:47.832418. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+
+## 2024-05-13 22:46:56.310536. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+
+## 2024-05-13 22:50:16.768827. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+
+## 2024-05-13 23:00:53.236969. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+
+## 2024-05-13 23:05:11.782433. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+
+## 2024-05-13 23:06:44.435407. Monthly summary: 2024-04
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 248.23M Eur | Δ -840.01k Eur | -0.34 %
+flat increased 23 | E 13.09k Eur | μ 1.31k Eur | 7.73 %
+flat decreased 225 | E -191.35k Eur | μ -1.66k Eur | -3.89 %
+flat stable 1733
+────────────────────────────────────────
+

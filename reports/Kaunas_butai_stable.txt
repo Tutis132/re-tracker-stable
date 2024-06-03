@@ -1,0 +1,7 @@
+## 2024-06-03 22:35:11.046830. Monthly summary: 2024-05
+────────────────────────────────────────
+flat count | total 5559 | unchanged
+flat price | E 79.05M Eur | stable
+flat stable 660
+────────────────────────────────────────
+

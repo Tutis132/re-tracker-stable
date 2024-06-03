@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Price Predictions</h2>
+<ul>
+    {% for section in profiles.sections() %}
+    <li>
+        <h3>{{ section }}</h3>
+        <div class="profile-prediction mt-3">
+            {% if predictions[section] %}
+                <img src="{{ url_for('static', filename=predictions[section]) }}" alt="Prediction for {{ section }}" width="800" height="400">
+            {% else %}
+                <p>Prediction not available for {{ section }}</p>
+            {% endif %}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

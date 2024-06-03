@@ -1,0 +1,147 @@
+{% extends 'layout.html' %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Edit Profile: {{ profile_name }}</h1>
+    <form method="POST" action="">
+        <div class="form-group">
+            <label for="url">URL</label>
+            <input type="text" class="form-control" name="url" id="url" placeholder="URL" required value="{{ profile_data['url'] }}">
+        </div>
+        <div class="form-group">
+            <label for="table">Table Name</label>
+            <input type="text" class="form-control" name="table" id="table" placeholder="Table Name" required value="{{ profile_data['table'] }}">
+        </div>
+        <div class="form-group">
+            <label for="queue">Queue</label>
+            <input type="text" class="form-control" name="queue" id="queue" placeholder="Queue" required value="{{ profile_data['queue'] }}">
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select class="form-control" name="type" id="type">
+                <option value="house" {% if profile_data['type'] == 'house' %}selected{% endif %}>House</option>
+                <option value="flat" {% if profile_data['type'] == 'flat' %}selected{% endif %}>Flat</option>
+                <option value="site" {% if profile_data['type'] == 'site' %}selected{% endif %}>Site</option>
+            </select>
+        </div>
+
+        <h3>Scraping Settings</h3>
+        <div class="form-group">
+            <label for="scrapingFrequency">Scraping Frequency</label>
+            <select name="scrapingFrequency" id="scrapingFrequency" class="form-control" onchange="updateScrapingFields()">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+        <div id="scrapingTimeContainer"></div>
+
+        <h3>Report Settings</h3>
+        <div class="form-group">
+            <label for="reportFrequency">Report Frequency</label>
+            <select name="reportFrequency" id="reportFrequency" class="form-control" onchange="updateReportFields()">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+        <div id="reportTimeContainer"></div>
+
+        <button type="submit" class="btn btn-primary">Update Profile</button>
+    </form>
+    <a href="{{ url_for('automation') }}" class="btn btn-secondary mt-3">Back to Profiles</a>
+</div>
+
+<script>
+    function updateScrapingFields() {
+        var frequency = document.getElementById('scrapingFrequency').value;
+        var container = document.getElementById('scrapingTimeContainer');
+    
+        container.innerHTML = '';
+    
+        if (frequency === 'daily') {
+            container.innerHTML = `
+                <label for="reportTime">Scraping Time</label>
+                <input type="time" name="scrapingTime" id="scrapingTime" class="form-control" required value="{{ profile_data['scrapingTime']|default('', true) }}">
+            `;
+        } else if (frequency === 'weekly') {
+            container.innerHTML = `
+                <label for="scrapingDay">Scraping Day</label>
+                <select name="scrapingDay" id="scrapingDay" class="form-control">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+                <label for="scrapingTimeWeekly">Scraping Time</label>
+                <input type="time" name="scrapingTime" id="scrapingTimeWeekly" class="form-control" required value="{{ profile_data['scrapingTime']|default('', true) }}">
+            `;
+        } else if (frequency === 'monthly') {
+            container.innerHTML = `
+                <label for="scrapingDayMonthly">Day of the Month</label>
+                <input type="number" name="scrapingDay" id="scrapingDayMonthly" class="form-control" min="1" max="31" placeholder="Day of the month" required value="{{ profile_data['scrapingDay']|default('', true) }}">
+                <label for="scrapingTimeMonthly">Report Time</label>
+                <input type="time" name="scrapingTime" id="scrapingTimeMonthly" class="form-control" required value="{{ profile_data['scrapingTime']|default('', true) }}">
+            `;
+        }
+
+        if(frequency === 'weekly' && '{{ profile_data['scrapingDay'] }}') {
+            document.getElementById('scrapingDay').value = '{{ profile_data['scrapingDay'] }}';
+        }
+    }
+    function updateFrequencyFields() {
+        var frequency = document.getElementById('reportFrequency').value;
+        var container = document.getElementById('reportTimeContainer');
+    
+        container.innerHTML = '';
+    
+        if (frequency === 'daily') {
+            container.innerHTML = `
+                <label for="reportTime">Report Time</label>
+                <input type="time" name="reportTime" id="reportTime" class="form-control" required value="{{ profile_data['reportTime']|default('', true) }}">
+            `;
+        } else if (frequency === 'weekly') {
+            container.innerHTML = `
+                <label for="reportDay">Report Day</label>
+                <select name="reportDay" id="reportDay" class="form-control">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+                <label for="reportTimeWeekly">Report Time</label>
+                <input type="time" name="reportTime" id="reportTimeWeekly" class="form-control" required value="{{ profile_data['reportTime']|default('', true) }}">
+            `;
+        } else if (frequency === 'monthly') {
+            container.innerHTML = `
+                <label for="reportDayMonthly">Day of the Month</label>
+                <input type="number" name="reportDay" id="reportDayMonthly" class="form-control" min="1" max="31" placeholder="Day of the month" required value="{{ profile_data['reportDay']|default('', true) }}">
+                <label for="reportTimeMonthly">Report Time</label>
+                <input type="time" name="reportTime" id="reportTimeMonthly" class="form-control" required value="{{ profile_data['reportTime']|default('', true) }}">
+            `;
+        }
+
+        if(frequency === 'weekly' && '{{ profile_data['reportDay'] }}') {
+            document.getElementById('reportDay').value = '{{ profile_data['reportDay'] }}';
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        updateFrequencyFields();
+        document.getElementById('reportFrequency').addEventListener('change', updateFrequencyFields);
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        updateScrapingFields();
+        document.getElementById('scrapingFrequency').addEventListener('change', updateScrapingFields);
+    });
+</script>
+
+{% endblock %}

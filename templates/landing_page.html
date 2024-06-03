@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Welcome to Real Estate Analysis and Prognosis Tool</h1>
+    <p>Explore property data and insightful analytics.</p>
+    <a href="{{ url_for('automation') }}" class="btn-primary">Subscribe for Updates</a>
+    <a href="{{ url_for('market_insights') }}" class="btn-secondary">View Analysis</a>
+</div>
+{% endblock %}

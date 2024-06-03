@@ -1,0 +1,102 @@
+## Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 48 | 8 gone
+house price | E 3.17M Eur | Δ -8.50k Eur | -0.27 %
+house increased 1 | E 1.50k Eur | μ 1.50k Eur | 4.35 %
+house decreased 2 | E -10.00k Eur | μ -5.00k Eur | -14.29 %
+house stable 53
+────────────────────────────────────────
+
+## Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 48 | 8 gone
+house price | E 3.17M Eur | Δ -8.50k Eur | -0.27 %
+house increased 1 | E 1.50k Eur | μ 1.50k Eur | 4.35 %
+house decreased 2 | E -10.00k Eur | μ -5.00k Eur | -14.29 %
+house stable 53
+────────────────────────────────────────
+
+## Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 48 | 8 gone
+house price | E 3.17M Eur | Δ -8.50k Eur | -0.27 %
+house increased 1 | E 1.50k Eur | μ 1.50k Eur | 4.35 %
+house decreased 2 | E -10.00k Eur | μ -5.00k Eur | -14.29 %
+house stable 53
+────────────────────────────────────────
+
+## Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 48 | 8 gone
+house price | E 3.17M Eur | Δ -8.50k Eur | -0.27 %
+house increased 1 | E 1.50k Eur | μ 1.50k Eur | 4.35 %
+house decreased 2 | E -10.00k Eur | μ -5.00k Eur | -14.29 %
+house stable 8
+────────────────────────────────────────
+
+## Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 48 | 8 gone
+house price | E 3.17M Eur | Δ -8.50k Eur | -0.27 %
+house increased 1 | E 1.50k Eur | μ 1.50k Eur | 4.35 %
+house decreased 2 | E -10.00k Eur | μ -5.00k Eur | -14.29 %
+house stable 45
+────────────────────────────────────────
+
+## Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 48 | 8 gone
+house price | E 3.17M Eur | Δ -8.50k Eur | -0.27 %
+house increased 1 | E 1.50k Eur | μ 1.50k Eur | 4.35 %
+house decreased 2 | E -10.00k Eur | μ -5.00k Eur | -14.29 %
+house stable 45
+────────────────────────────────────────
+
+## Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 51 | 8 gone
+house price | E 3.25M Eur | Δ -5.00k Eur | -0.15 %
+house decreased 1 | E -5.00k Eur | μ -5.00k Eur | -11.11 %
+house stable 50
+────────────────────────────────────────
+
+## Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 53 | 8 gone
+house price | E 3.28M Eur | Δ -5.00k Eur | -0.15 %
+house decreased 1 | E -5.00k Eur | μ -5.00k Eur | -11.11 %
+house stable 52
+────────────────────────────────────────
+
+## Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 53 | 8 gone
+house price | E 3.28M Eur | Δ -5.00k Eur | -0.15 %
+house decreased 1 | E -5.00k Eur | μ -5.00k Eur | -11.11 %
+house stable 52
+────────────────────────────────────────
+
+## 2024-04-16 00:08:00.210620. Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 53 | 8 gone
+house price | E 3.28M Eur | Δ -5.00k Eur | -0.15 %
+house decreased 1 | E -5.00k Eur | μ -5.00k Eur | -11.11 %
+house stable 52
+────────────────────────────────────────
+
+## 2024-04-16 00:08:00.245019. Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 53 | 8 gone
+house price | E 3.28M Eur | Δ -5.00k Eur | -0.15 %
+house decreased 1 | E -5.00k Eur | μ -5.00k Eur | -11.11 %
+house stable 52
+────────────────────────────────────────
+
+## 2024-04-16 00:13:00.381086. Monthly summary: 2024-03
+────────────────────────────────────────
+house count | total 53 | 8 gone
+house price | E 3.28M Eur | Δ -5.00k Eur | -0.15 %
+house decreased 1 | E -5.00k Eur | μ -5.00k Eur | -11.11 %
+house stable 52
+────────────────────────────────────────
+

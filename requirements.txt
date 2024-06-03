@@ -1,0 +1,49 @@
+# Core Libraries
+logging
+datetime
+json
+os
+sys
+argparse
+configparser
+statistics
+time
+random
+atexit
+shutil
+re
+threading
+
+# Flask and Extensions
+Flask
+flask_wtf
+Flask-Login
+flask_sqlalchemy
+flask_apscheduler
+
+# SQLAlchemy
+SQLAlchemy
+sqlalchemy
+sqlalchemy-ext
+
+# WTForms
+wtforms
+
+# Data Analysis and Visualization
+pandas
+numpy
+matplotlib
+statsmodels
+scikit-learn
+
+# TensorFlow and Keras
+tensorflow
+
+# Selenium
+selenium
+
+# Werkzeug
+werkzeug
+
+# Additional Modules
+urllib

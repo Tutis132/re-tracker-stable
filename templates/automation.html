@@ -1,0 +1,158 @@
+{% extends 'layout.html' %}
+
+{% block title %}Automation{% endblock %}
+
+{% block content %}
+<h1>Automation Controls</h1>
+<p>Here you can configure your automations and trigger search manually </p>
+
+<h2>Manage Profiles</h2>
+<form method="POST" action="/automation">
+    <div class="form-group">
+        <label for="name">Profile Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Profile Name" required>
+    </div>
+    <div class="form-group">
+        <label for="url">URL</label>
+        <input type="text" class="form-control" name="url" placeholder="URL" required>
+    </div>
+    <div class="form-group">
+        <label for="table">Group</label>
+        <input type="text" class="form-control" name="table" placeholder="Table Name" required>
+    </div>
+    <div class="form-group">
+        <label for="type">Type</label>
+        <select class="form-control" name="type">
+            <option value="house">House</option>
+            <option value="flat">Flat</option>
+        </select>
+    </div>
+
+    <h3>Searching settings</h3>
+    <div class="form-group">
+        <label for="scrapingFrequency">Searching frequency</label>
+        <select name="scrapingFrequency" id="scrapingFrequency" class="form-control">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select>
+    </div>
+    <div class="form-group" id="scrapingTimeContainer"></div>
+
+    <h3>Report Settings</h3>
+    <div class="form-group">
+        <label for="reportFrequency">Report Frequency</label>
+        <select name="reportFrequency" id="reportFrequency" class="form-control">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select>
+    </div>
+    <div class="form-group" id="reportTimeContainer"></div>
+
+    <button type="submit" class="btn btn-primary">Save Profile</button>
+</form>
+
+
+    <script>
+        document.getElementById('reportFrequency').addEventListener('change', function() {
+            var frequency = this.value;
+            var container = document.getElementById('reportTimeContainer');
+        
+            container.innerHTML = ''; 
+        
+            if (frequency === 'daily') {
+                container.innerHTML = `
+                    <label for="reportTime">Report Time</label>
+                    <input type="time" name="reportTime" id="reportTime" class="form-control" required>
+                `;
+            } else if (frequency === 'weekly') {
+                container.innerHTML = `
+                    <label for="reportDay">Report Day</label>
+                    <select name="reportDay" id="reportDay" class="form-control">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                    <label for="reportTimeWeekly">Report Time</label>
+                    <input type="time" name="reportTime" id="reportTimeWeekly" class="form-control" required>
+                `;
+            } else if (frequency === 'monthly') {
+                container.innerHTML = `
+                    <label for="reportDayMonthly">Day of the Month</label>
+                    <input type="number" name="reportDay" id="reportDayMonthly" class="form-control" min="1" max="31" placeholder="Day of the month" required>
+                    <label for="reportTimeMonthly">Report Time</label>
+                    <input type="time" name="reportTime" id="reportTimeMonthly" class="form-control" required>
+                `;
+            }
+        });
+        document.getElementById('scrapingFrequency').addEventListener('change', function() {
+            var frequency = this.value;
+            var container = document.getElementById('scrapingTimeContainer');
+        
+            container.innerHTML = ''; 
+        
+            if (frequency === 'daily') {
+                container.innerHTML = `
+                    <label for="scrapingTime">Scraping Time</label>
+                    <input type="time" name="scrapingTime" id="scrapingTime" class="form-control" required>
+                `;
+            } else if (frequency === 'weekly') {
+                container.innerHTML = `
+                    <label for="scrapingDay">Scraping Day</label>
+                    <select name="scrapingDay" id="scrapingDay" class="form-control">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                    <label for="scrapingTimeWeekly">Report Time</label>
+                    <input type="time" name="scrapingTime" id="scrapingTimeWeekly" class="form-control" required>
+                `;
+            } else if (frequency === 'monthly') {
+                container.innerHTML = `
+                    <label for="scrapingDayMonthly">Day of the Month</label>
+                    <input type="number" name="reportDay" id="scrapingDayMonthly" class="form-control" min="1" max="31" placeholder="Day of the month" required>
+                    <label for="scrapingTimeMonthly">Scraping Time</label>
+                    <input type="time" name="scrapingTime" id="scrapingTimeMonthly" class="form-control" required>
+                `;
+            }
+        });
+        </script>
+
+    <hr>
+    <h2>Existing Profiles</h2>
+    <ul>
+        {% for section in profiles.sections() %}
+            <li>
+                <strong>{{ section }}</strong> - {{ profiles[section]['url'] }} <br>
+                <div class="profile-actions d-flex justify-content-start align-items-center">
+                    <form action="/trigger-scrape" method="post" class="mr-2">
+                        <input type="hidden" name="section" value="{{ section }}">
+                        <input type="hidden" name="type" value="{{ profiles[section]['type'] }}">
+                        <button type="submit" class="btn btn-primary btn-sm mr-2">Trigger search</button>
+                    </form>
+                    <form action="/trigger-report" method="post" class="mr-2">
+                        <input type="hidden" name="section" value="{{ section }}">
+                        <button type="submit" class="btn btn-warning btn-sm">Trigger report</button>
+                    </form>
+                    <a href="{{ url_for('data', table_name=profiles[section]['table'], property_type=profiles[section]['type']) }}" class="btn btn-info btn-sm mr-2">View Data</a>
+                    <a href="{{ url_for('reports', profile_name=section) }}" class="btn btn-warning btn-sm mr-2">Reports</a>
+                    <a href="/edit-profile/{{ section }}" class="btn btn-secondary btn-sm mr-2">Edit</a>
+                    <form action="/delete-profile/{{ section }}" method="post">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+

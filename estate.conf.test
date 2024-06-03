@@ -1,0 +1,9 @@
+[SecondProfile]
+url = https://www.aruodas.lt/gyvenamieji-namai/vilkaviskyje/?FBuildingType=box
+table = testing
+queue = tea
+type = house
+scrapingfrequency = daily
+scrapingtime = 00:16
+reportfrequency = daily
+reporttime = 00:13
